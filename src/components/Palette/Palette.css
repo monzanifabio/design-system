@@ -1,0 +1,81 @@
+.ds-palette {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.ds-palette__title {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ds-palette__grid {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.ds-palette__grid--small {
+  gap: 0.25rem;
+}
+
+.ds-palette__grid--medium {
+  gap: 0;
+}
+
+.ds-palette__grid--large {
+  gap: 0.5rem;
+}
+
+.ds-palette__swatch {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 80px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  cursor: pointer;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ds-palette__swatch:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.ds-palette__swatch:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: none;
+}
+
+.ds-palette__color {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ds-palette__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: white;
+  gap: 0.25rem;
+  min-height: 60px;
+}
+
+.ds-palette__name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.ds-palette__hex {
+  font-size: 0.625rem;
+  font-family: "Monaco", "Courier New", monospace;
+  color: #6b7280;
+  text-transform: uppercase;
+}

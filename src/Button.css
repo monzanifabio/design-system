@@ -1,0 +1,19 @@
+.ds-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #0078d4;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ds-btn:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.ds-btn:hover:not(:disabled) {
+  background: #005fa3;
+}

@@ -1,19 +1,98 @@
 .ds-btn {
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
+  font-weight: 500;
   border: none;
-  border-radius: 4px;
-  background: #0078d4;
-  color: #fff;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ds-btn--primary {
+  background: var(--blue-500);
+  color: white;
+  border: 1px solid var(--blue-500);
+}
+
+.ds-btn--primary:hover:not(:disabled) {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+}
+
+.ds-btn--primary:active:not(:disabled) {
+  background: var(--blue-700);
+  border-color: var(--blue-700);
+}
+
+.ds-btn--secondary {
+  background: var(--gray-600);
+  color: white;
+  border: 1px solid var(--gray-600);
+}
+
+.ds-btn--secondary:hover:not(:disabled) {
+  background: var(--gray-700);
+  border-color: var(--gray-700);
+}
+
+.ds-btn--secondary:active:not(:disabled) {
+  background: var(--gray-800);
+  border-color: var(--gray-800);
+}
+
+.ds-btn--success {
+  background: var(--green-500);
+  color: white;
+  border: 1px solid var(--green-500);
+}
+
+.ds-btn--success:hover:not(:disabled) {
+  background: var(--green-600);
+  border-color: var(--green-600);
+}
+
+.ds-btn--success:active:not(:disabled) {
+  background: var(--green-700);
+  border-color: var(--green-700);
+}
+
+.ds-btn--danger {
+  background: var(--red-500);
+  color: white;
+  border: 1px solid var(--red-500);
+}
+
+.ds-btn--danger:hover:not(:disabled) {
+  background: var(--red-600);
+  border-color: var(--red-600);
+}
+
+.ds-btn--danger:active:not(:disabled) {
+  background: var(--red-700);
+  border-color: var(--red-700);
+}
+
+.ds-btn--outline {
+  background: transparent;
+  color: var(--blue-600);
+  border: 1px solid var(--blue-600);
+}
+
+.ds-btn--outline:hover:not(:disabled) {
+  background: var(--blue-50);
+  color: var(--blue-700);
+  border-color: var(--blue-700);
+}
+
+.ds-btn--outline:active:not(:disabled) {
+  background: var(--blue-100);
 }
 
 .ds-btn:disabled {
-  background: #b0b0b0;
+  background: var(--gray-300);
+  color: var(--gray-500);
+  border-color: var(--gray-300);
   cursor: not-allowed;
-}
-
-.ds-btn:hover:not(:disabled) {
-  background: #005fa3;
+  opacity: 0.6;
 }

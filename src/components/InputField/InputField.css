@@ -1,0 +1,87 @@
+.ds-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--grey-200);
+  background: var(--grey-10);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.ds-input__icon-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  flex-shrink: 0;
+}
+
+.ds-input__icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.ds-input__field {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family:
+    "Noto Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: var(--grey-990);
+  min-width: 0;
+}
+
+.ds-input__field::placeholder {
+  color: var(--grey-500);
+}
+
+/* State: Default */
+.ds-input--default .ds-input__field {
+  color: var(--grey-990);
+}
+
+/* State: Placeholder */
+.ds-input--placeholder .ds-input__field {
+  color: var(--grey-500);
+}
+
+/* State: Focus */
+.ds-input--focus {
+  border-color: var(--magenta-600);
+  box-shadow: 0px 0px 0px 2px var(--magenta-400);
+}
+
+.ds-input--focus .ds-input__field {
+  color: var(--grey-990);
+}
+
+/* State: Disabled */
+.ds-input--disabled {
+  background: var(--grey-150);
+  border-color: var(--grey-200);
+  cursor: not-allowed;
+}
+
+.ds-input--disabled .ds-input__field {
+  color: var(--grey-600);
+  cursor: not-allowed;
+}
+
+.ds-input--disabled .ds-input__icon {
+  opacity: 0.6;
+}

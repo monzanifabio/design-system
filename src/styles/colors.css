@@ -284,4 +284,19 @@
   --rose-800: #9f1239;
   --rose-900: #881337;
   --rose-950: #4c0519;
+
+  /* Magenta */
+  --magenta-400: #f577fb;
+  --magenta-600: #d324d5;
+
+  /* Grey Scale for Design System */
+  --grey-10: #fbfbfb;
+  --grey-150: #d8d9db;
+  --grey-200: #cacbce;
+  --grey-500: #74777e;
+  --grey-600: #5a5e66;
+  --grey-990: #050b16;
+
+  /* Border Radius */
+  --border-radius-md: 6px;
 }

@@ -2,15 +2,30 @@ import React from "react";
 import "./Button.css";
 
 export interface ButtonProps {
-  label: string;
+  label?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
-  variant?: "primary" | "secondary" | "success" | "danger" | "outline";
+  startIcon?: boolean;
+  endIcon?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, onClick, type = "button", disabled = false, variant = "primary" }) => (
-  <button className={`ds-btn ds-btn--${variant}`} type={type} onClick={onClick} disabled={disabled}>
-    {label}
+export const Button: React.FC<ButtonProps> = ({ label = "Button", onClick, type = "button", disabled = false, startIcon = true, endIcon = true }) => (
+  <button className="ds-btn" type={type} onClick={onClick} disabled={disabled}>
+    {startIcon && (
+      <span className="ds-btn__icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.6667 8.66667H8.66667V12.6667H7.33333V8.66667H3.33333V7.33333H7.33333V3.33333H8.66667V7.33333H12.6667V8.66667Z" fill="currentColor" />
+        </svg>
+      </span>
+    )}
+    <span className="ds-btn__label">{label}</span>
+    {endIcon && (
+      <span className="ds-btn__icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10.6667L3.33333 6L4.27333 5.06L8 8.78667L11.7267 5.06L12.6667 6L8 10.6667Z" fill="currentColor" />
+        </svg>
+      </span>
+    )}
   </button>
 );

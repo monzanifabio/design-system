@@ -10,57 +10,46 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    label: "Primary Button",
-    variant: "primary",
+    label: "Button",
   },
 };
 
-export const Secondary: Story = {
+export const WithoutStartIcon: Story = {
   args: {
-    label: "Secondary Button",
-    variant: "secondary",
+    label: "Button",
+    startIcon: false,
   },
 };
 
-export const Success: Story = {
+export const WithoutEndIcon: Story = {
   args: {
-    label: "Success Button",
-    variant: "success",
+    label: "Button",
+    endIcon: false,
   },
 };
 
-export const Danger: Story = {
+export const WithoutIcons: Story = {
   args: {
-    label: "Danger Button",
-    variant: "danger",
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    label: "Outline Button",
-    variant: "outline",
+    label: "Button",
+    startIcon: false,
+    endIcon: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    label: "Disabled Button",
+    label: "Button",
     disabled: true,
   },
 };
 
-export const AllVariants: Story = {
+export const AllStates: Story = {
   render: () => (
-    <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "300px" }}>
-      <Button label="Primary" variant="primary" />
-      <Button label="Secondary" variant="secondary" />
-      <Button label="Success" variant="success" />
-      <Button label="Danger" variant="danger" />
-      <Button label="Outline" variant="outline" />
-      <Button label="Disabled" variant="primary" disabled />
+    <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "flex-start" }}>
+      <Button label="Button" />
+      <Button label="Button" disabled />
     </div>
   ),
 };

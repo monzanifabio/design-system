@@ -3,10 +3,9 @@
   align-items: center;
   gap: 8px;
   width: 200px;
-  padding: 8px 12px;
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--grey-200);
-  background: var(--grey-10);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--rounded-md);
+  border: 1px solid;
   transition: all 0.2s ease;
   overflow: hidden;
 }
@@ -22,6 +21,7 @@
   width: 16px;
   height: 16px;
   display: block;
+  color: var(--gray-700);
 }
 
 .ds-input__field {
@@ -42,46 +42,71 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.15px;
-  color: var(--grey-990);
   min-width: 0;
-}
-
-.ds-input__field::placeholder {
-  color: var(--grey-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* State: Default */
+.ds-input--default {
+  background-color: var(--white);
+  border-color: var(--gray-300);
+}
+
 .ds-input--default .ds-input__field {
-  color: var(--grey-990);
+  color: var(--black);
+}
+
+.ds-input--default .ds-input__field::placeholder {
+  color: var(--gray-500);
 }
 
 /* State: Placeholder */
+.ds-input--placeholder {
+  background-color: var(--white);
+  border-color: var(--gray-300);
+}
+
 .ds-input--placeholder .ds-input__field {
-  color: var(--grey-500);
+  color: var(--gray-500);
+}
+
+.ds-input--placeholder .ds-input__field::placeholder {
+  color: var(--gray-500);
 }
 
 /* State: Focus */
 .ds-input--focus {
-  border-color: var(--magenta-600);
-  box-shadow: 0px 0px 0px 2px var(--magenta-400);
+  background-color: var(--white);
+  border-color: var(--pink-500);
+  box-shadow: 0px 0px 0px 2px var(--pink-400);
 }
 
 .ds-input--focus .ds-input__field {
-  color: var(--grey-990);
+  color: var(--black);
+}
+
+.ds-input--focus .ds-input__field::placeholder {
+  color: var(--gray-500);
 }
 
 /* State: Disabled */
 .ds-input--disabled {
-  background: var(--grey-150);
-  border-color: var(--grey-200);
+  background-color: var(--gray-200);
+  border-color: var(--gray-300);
   cursor: not-allowed;
 }
 
 .ds-input--disabled .ds-input__field {
-  color: var(--grey-600);
+  color: var(--gray-500);
   cursor: not-allowed;
 }
 
+.ds-input--disabled .ds-input__field::placeholder {
+  color: var(--gray-500);
+}
+
 .ds-input--disabled .ds-input__icon {
-  opacity: 0.6;
+  color: var(--gray-500);
 }

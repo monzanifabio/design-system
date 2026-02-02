@@ -70,12 +70,12 @@
 .ds-palette__name {
   font-size: 0.75rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--grey-700);
 }
 
 .ds-palette__hex {
   font-size: 0.625rem;
   font-family: "Monaco", "Courier New", monospace;
-  color: #6b7280;
+  color: var(--grey-500);
   text-transform: uppercase;
 }

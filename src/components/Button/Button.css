@@ -26,19 +26,19 @@
 }
 
 .ds-btn--secondary {
-  background: var(--gray-600);
+  background: var(--grey-600);
   color: white;
-  border: 1px solid var(--gray-600);
+  border: 1px solid var(--grey-600);
 }
 
 .ds-btn--secondary:hover:not(:disabled) {
-  background: var(--gray-700);
-  border-color: var(--gray-700);
+  background: var(--grey-700);
+  border-color: var(--grey-700);
 }
 
 .ds-btn--secondary:active:not(:disabled) {
-  background: var(--gray-800);
-  border-color: var(--gray-800);
+  background: var(--grey-800);
+  border-color: var(--grey-800);
 }
 
 .ds-btn--success {
@@ -90,9 +90,9 @@
 }
 
 .ds-btn:disabled {
-  background: var(--gray-300);
-  color: var(--gray-500);
-  border-color: var(--gray-300);
+  background: var(--grey-300);
+  color: var(--grey-500);
+  border-color: var(--grey-300);
   cursor: not-allowed;
   opacity: 0.6;
 }

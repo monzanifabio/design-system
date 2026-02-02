@@ -119,3 +119,33 @@ export const colors = {
     950: "var(--amber-950)",
   },
 };
+
+export const borderRadius = {
+  sm: "var(--rounded-sm)",
+  base: "var(--rounded)",
+  md: "var(--rounded-md)",
+  lg: "var(--rounded-lg)",
+  xl: "var(--rounded-xl)",
+  "2xl": "var(--rounded-2xl)",
+  "3xl": "var(--rounded-3xl)",
+  full: "var(--rounded-full)",
+};
+
+export const spacing = {
+  1: "var(--spacing-1)",
+  2: "var(--spacing-2)",
+  3: "var(--spacing-3)",
+  4: "var(--spacing-4)",
+  5: "var(--spacing-5)",
+  6: "var(--spacing-6)",
+  7: "var(--spacing-7)",
+  8: "var(--spacing-8)",
+  9: "var(--spacing-9)",
+  10: "var(--spacing-10)",
+  11: "var(--spacing-11)",
+  12: "var(--spacing-12)",
+  13: "var(--spacing-13)",
+  14: "var(--spacing-14)",
+  15: "var(--spacing-15)",
+};
+

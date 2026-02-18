@@ -1,0 +1,13 @@
+.card-component {
+  color: var(--gray-950);
+  background: var(--white, #fefefe);
+  border: 1px solid var(--gray-200, #e4e4e7);
+  border-radius: var(--border-radius\/rounded-lg, 8px);
+  padding: var(--spacing-3, 12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}

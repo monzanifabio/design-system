@@ -50,6 +50,23 @@ export const AllStates: Story = {
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "flex-start" }}>
       <Button label="Button" />
       <Button label="Button" disabled />
+      <Button label="Button" variant="outline" />
+      <Button label="Button" variant="outline" disabled />
     </div>
   ),
+};
+
+export const Outline: Story = {
+  args: {
+    label: "Button",
+    variant: "outline",
+  },
+};
+
+export const OutlineDisabled: Story = {
+  args: {
+    label: "Button",
+    variant: "outline",
+    disabled: true,
+  },
 };

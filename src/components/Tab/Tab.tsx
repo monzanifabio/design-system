@@ -10,24 +10,38 @@ const defaultIcon = (
   </svg>
 );
 
+import type { IconProps } from "../Icon/Icon";
+
 export interface TabProps {
   label: string;
   state?: "Selected" | "Hover" | "Unselected";
   onClick?: () => void;
-  icon?: boolean | React.ReactNode;
+  icon?: boolean | React.ReactNode | ((props?: Partial<IconProps>) => React.ReactNode);
+  iconProps?: Partial<IconProps>;
   className?: string;
   disabled?: boolean;
 }
 
-export const Tab: React.FC<TabProps> = ({ label, state = "Unselected", onClick, icon = true, className = "", disabled = false }) => {
+export const Tab: React.FC<TabProps> = ({ label, state = "Unselected", onClick, icon = true, iconProps = {}, className = "", disabled = false }) => {
   // Determine state class
   let stateClass = "ds-tab--unselected";
   if (state === "Selected") stateClass = "ds-tab--selected";
   else if (state === "Hover") stateClass = "ds-tab--hover";
 
+  let iconNode: React.ReactNode = null;
+  if (icon) {
+    if (typeof icon === "function") {
+      iconNode = icon(iconProps);
+    } else if (icon === true) {
+      iconNode = defaultIcon;
+    } else {
+      iconNode = icon;
+    }
+  }
+
   return (
     <a className={["ds-tab", stateClass, className, disabled ? "ds-tab--disabled" : ""].filter(Boolean).join(" ")} onClick={onClick} aria-selected={state === "Selected"} role="tab" aria-disabled={disabled}>
-      {icon && <span className="ds-tab__icon">{icon === true ? defaultIcon : icon}</span>}
+      {iconNode && <span className="ds-tab__icon">{iconNode}</span>}
       <span className="ds-tab__label">{label}</span>
     </a>
   );

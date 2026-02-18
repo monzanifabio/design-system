@@ -1,9 +1,10 @@
-import "./App.css";
-import { Button } from "./components/Button/Button";
-import { InputField } from "./components/InputField/InputField";
-import { Tag } from "./components/Tag/Tag";
+import React from "react";
+import "./Playground.css";
+import { Button } from "../Button/Button";
+import { InputField } from "../InputField/InputField";
+import { Tag } from "../Tag/Tag";
 
-function App() {
+export const Playground: React.FC = () => {
   return (
     <div className="playground">
       <div className="playground__header">
@@ -14,6 +15,4 @@ function App() {
       <div className="playground__canvas">{/* Add your components here to build interfaces */}</div>
     </div>
   );
-}
-
-export default App;
+};

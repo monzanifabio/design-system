@@ -1,0 +1,75 @@
+.ds-tab {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  padding: var(--spacing-2) var(--spacing-3);
+  gap: var(--spacing-2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background: none;
+  border: none;
+  color: var(--tab-unselected-text, #52525c);
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.ds-tab__hover-area {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1, 4px);
+  padding: var(--spacing-2, 8px) var(--spacing-3, 12px);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.ds-tab__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: inherit;
+}
+
+.ds-tab__label {
+  flex-shrink: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* Selected State */
+.ds-tab--selected {
+  color: var(--tab-selected-text, #9053ff);
+  border-bottom: 2px solid var(--tab-selected-border, #9053ff);
+  background: var(--tab-selected-background, transparent);
+}
+.ds-tab--selected:hover {
+  color: var(--tab-selected-hover-text, #7a3ed9);
+  border-bottom-color: var(--tab-selected-hover-border, #7a3ed9);
+  background-color: var(--tab-selected-hover-background, transparent);
+}
+
+/* Unselected State */
+.ds-tab--unselected {
+  color: var(--tab-unselected-text, #52525c);
+  background: none;
+  border-radius: 6px;
+}
+.ds-tab--unselected:hover {
+  color: var(--gray-600);
+  background-color: var(--gray-100);
+}
+
+.ds-tab--disabled {
+  color: var(--gray-400);
+  cursor: not-allowed;
+  background: none;
+  opacity: 0.6;
+}

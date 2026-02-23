@@ -29,6 +29,6 @@
 }
 
 .ds-select__native:disabled {
-  color: var(--gray500, #71717b);
+  color: var(--gray-500, #71717b);
   cursor: not-allowed;
 }

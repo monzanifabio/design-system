@@ -1,10 +1,10 @@
 .ds-select {
-  border: 1px solid var(--select-default-border, #d4d4d8);
-  background-color: var(--select-default-background, #fefefe);
-  border-radius: var(--border-radius-rounded-md, 6px);
+  border: 1px solid var(--gray-300);
+  background-color: var(--white, #fefefe);
+  border-radius: var(--rounded-md);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   padding: var(--spacing-2) var(--spacing-3);
   width: 150px;
   cursor: pointer;
@@ -22,13 +22,13 @@
   background: transparent;
   border: none;
   outline: none;
-  color: var(--select-default-text, #080808);
+  color: var(--black, #080808);
   padding: 0;
   width: 100%;
   cursor: pointer;
 }
 
 .ds-select__native:disabled {
-  color: var(--select-disabled-text, #71717b);
+  color: var(--gray500, #71717b);
   cursor: not-allowed;
 }

@@ -1,19 +1,7 @@
-import "./App.css";
-import { Button } from "./components/Button/Button";
-import { InputField } from "./components/InputField/InputField";
-import { Tag } from "./components/Tag/Tag";
+import Playground from "./components/Playground/Playground";
 
 function App() {
-  return (
-    <div className="playground">
-      <div className="playground__header">
-        <h1>Design System Playground</h1>
-        <p>Build and test interfaces using your components</p>
-      </div>
-
-      <div className="playground__canvas">{/* Add your components here to build interfaces */}</div>
-    </div>
-  );
+  return <Playground />;
 }
 
 export default App;
